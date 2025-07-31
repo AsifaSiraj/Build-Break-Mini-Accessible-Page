@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights Bakery | Artisan Breads & Pastries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="logo">
+                <!-- ❌ Violation 1: Missing alt text -->
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <!-- ❌ Violation 2: Empty link with no text -->
+                <li><a href="#"></a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#order" class="btn">Order Online</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero" aria-label="Welcome to Sweet Delights Bakery">
+            <div class="hero-content">
+                <!-- ❌ Violation 3: Poor contrast (light gray text on white) -->
+                <h1 style="color:#cccccc;">Artisan Bakery & Café</h1>
+                <p>Handcrafted with love since 1985</p>
+                <!-- ❌ Violation 4: Wrong ARIA role on button -->
+                <a href="#menu" role="checkbox" class="btn">View Our Menu</a>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-products">
+            <h2>Our Signature Creations</h2>
+            <!-- ❌ Violation 5: Skipped heading level (h4 directly after h2) -->
+            <h4>Featured Item Highlight</h4>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                         alt="Croissants on wooden board">
+                    <h3>French Croissants</h3>
+                    <p>Buttery, flaky perfection baked fresh daily</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                         alt="Chocolate cake with berries">
+                    <h3>Chocolate Decadence</h3>
+                    <p>Rich chocolate cake with raspberry filling</p>
+                </div>
+                <div class="product-card">
+                    <!-- ❌ Violation 6 (extra): Redundant alt text (same as visible text) -->
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" 
+                         alt="Artisan Sourdough">
+                    <h3>Artisan Sourdough</h3>
+                    <p>24-hour fermented traditional bread</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <h2>Our Story</h2>
+                <p>Founded in 1985 by master baker Jacques LeBlanc, Sweet Delights has been serving the community with authentic European-style baked goods for over 35 years. We use only the finest ingredients and traditional techniques.</p>
+                <a href="#contact" class="btn-outline">Visit Us</a>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                     alt="Baker kneading dough">
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Visit Our Bakery</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Hours</h3>
+                    <p>Monday-Friday: 7am-6pm</p>
+                    <p>Saturday: 8am-5pm</p>
+                    <p>Sunday: 8am-3pm</p>
+                    
+                    <h3>Location</h3>
+                    <address>
+                        123 Baker Street<br>
+                        Portland, OR 97201
+                    </address>
+                    
+                    <h3>Contact</h3>
+                    <p>Phone: (503) 555-1234</p>
+                    <p>Email: hello@sweetdelights.com</p>
+                </div>
+                <div class="map">
+                    <!-- ❌ Violation 7 (extra): Missing title attribute for iframe -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" 
+                     alt="Sweet Delights Bakery Logo">
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <!-- ❌ Violation 8 (extra): Social icons without alt text -->
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Sweet Delights Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
